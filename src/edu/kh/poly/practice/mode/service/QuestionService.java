@@ -5,7 +5,7 @@ import java.util.Scanner;
 import edu.kh.poly.practice.model.vo.Person;
 
 public class QuestionService implements QuestionInterface {
-
+		Person pArr[] = new Person[5];
 	
 	
 	
@@ -63,15 +63,43 @@ public class QuestionService implements QuestionInterface {
 
 	@Override
 	public void insertPerson() {
-		// TODO Auto-generated method stub
+		
+		
 		
 	}
 
 	@Override
 	public void selectAll() {
-		// TODO Auto-generated method stub
+		int index = emptyIndex();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
+	
+	
+	public  int  emptyIndex() {
+		//memberArr배열을 0번 인덱스부터 끝까지 접근해서
+		//참조하는 값이 null인 경우 인덱스를 반환
+		
+		for(int i =0; i<pArr.length; i++) {
+			if(pArr[i] ==null) {
+				return i;
+			}
+		}
+		
+		return -1;
+	}
+	
 
 	@Override
 	public void selectStudent() {
